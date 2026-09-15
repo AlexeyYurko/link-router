@@ -1,0 +1,43 @@
+{
+  "fallback": {
+    "browser": "Chrome"
+  },
+  "rules": [
+    {
+      "name": "GitHub in Chrome",
+      "match": {
+        "host": "github.com"
+      },
+      "target": {
+        "browser": "Chrome"
+      }
+    },
+    {
+      "name": "Slack links in Chrome",
+      "source": ["com.tinyspeck.slackmacgap"],
+      "target": {
+        "browser": "Chrome"
+      }
+    },
+    {
+      "name": "Work sites in work profile",
+      "match": {
+        "host": "*.atlassian.net"
+      },
+      "target": {
+        "browser": "Chrome",
+        "profile": "Work"
+      }
+    },
+    {
+      "name": "Repo links",
+      "match": {
+        "host": "github.com",
+        "cwd": "/Volumes/Work/Projects"
+      },
+      "target": {
+        "browser": "Firefox"
+      }
+    }
+  ]
+}
